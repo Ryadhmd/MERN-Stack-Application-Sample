@@ -1,0 +1,45 @@
+-------------------
+Create the Network 
+-------------------
+
+docker network create app-network
+ 
+-------------------
+Launch the MongoDB Container 
+-------------------
+
+docker run -it --name mongodb --rm -d --network app-network mongo
+
+-------------------
+Build the NodeJS Image
+-------------------
+
+docker build . -t nodejs 
+
+-------------------
+Build the ReactJS Image
+-------------------
+
+docker build . -t reactjs 
+
+-------------------
+Run the NodeJS Container
+-------------------
+
+docker run -it --name NodeJS-server --rm --network app-network \
+-p 80:80 -v logs:/app/logs -v ~/app-sample/backend:/app/ \
+-v /app/node_modules nodejs 
+
+-------------------
+Run the ReactJS Container 
+-------------------
+
+docker run -it --name ReactJS-front --rm -p 3000:3000 -v
+~/app-sample/frontend/src:/app/src/ reactjs
+
+-------------------
+Stop and delete all Containers
+-------------------
+
+docker stop mongodb NodeJS-server ReactJS-front 
+
