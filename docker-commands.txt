@@ -8,7 +8,7 @@ docker network create app-network
 Launch the MongoDB Container 
 -------------------
 
-docker run -it --name mongodb --rm -d --network app-network mongo
+docker run -it --name mongodb --rm -d --network app-network -v app-data:/data/db mongo
 
 -------------------
 Build the NodeJS Image
