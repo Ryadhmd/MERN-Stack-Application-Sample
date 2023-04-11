@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  mongodb:
+    image: 'mongo'
+    volumes:
+      - app-data:/data/db
+    networks:
+      -  app-network
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+      - MONGO_INITDB_DATABASE=admin
+  backend:
+    build: ./backend
+    volumes:
+      - logs:/app/logs 
+      - ./backend:/app
+      - /app/node_modules 
+    networks:
+      - app-network
+    ports:
+      - '80:80'
+    depends_on:
+      - mongodb
+  frontend: 
+    build: ./frontend
+    volumes:
+      - ./frontend/src/:/app/src
+    ports:
+      - '3000:3000'
+
+volumes:
+  app-data:
+  logs: 
+networks:
+  app-network:
+    driver: bridge
