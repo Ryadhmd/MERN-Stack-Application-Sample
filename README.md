@@ -1,4 +1,4 @@
-#app-sample
+# app-sample
 
 I used the source code provided by the Udemy Course "Docker & Kubernetes: The Practical Guide" (https://www.udemy.com/course/docker-kubernetes-the-practical-guide/) for the purpose of learning and testing Docker and Kubernetes.
 
