@@ -9,8 +9,10 @@ In order to make the data persistent, the usage of volumes is necessary. You wil
 
 Both these ReactJS and NodeJS are available throught the Dockerhub : 
 
-For NodeJS :  docker pull ryadhamdini/app-sample-nodejs 
+For NodeJS :  
+```docker pull ryadhamdini/app-sample-nodejs```
 
-For ReactJS:  docker pull ryadhamdini/app-sample-reactjs 
+For ReactJS :
+```docker pull ryadhamdini/app-sample-reactjs```
 
 
