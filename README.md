@@ -10,7 +10,7 @@ In order to make the data persistent, the usage of volumes is necessary.
 You will find all the commands needed in order to make the application run in the docker-commands.txt file. 
 A docker-compose file is also provided.
 
-Both the ReactJS and NodeJS are available through Dockerhub:
+Both the ReactJS and NodeJS images are available through Dockerhub:
 
 For NodeJS:
 
