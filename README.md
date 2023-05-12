@@ -14,10 +14,10 @@ Both the ReactJS and NodeJS images are available through Dockerhub:
 
 For NodeJS:
 
-```bash docker pull ryadhamdini/app-sample-nodejs```
+```docker pull ryadhamdini/app-sample-nodejs```
 
 For ReactJS:
 
-```bashdocker pull ryadhamdini/app-sample-reactjs```
+```docker pull ryadhamdini/app-sample-reactjs```
 
 
